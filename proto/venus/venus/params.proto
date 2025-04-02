@@ -1,0 +1,15 @@
+syntax = "proto3";
+package venus.venus;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "venus/x/venus/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "venus/x/venus/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

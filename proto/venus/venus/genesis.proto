@@ -1,0 +1,17 @@
+syntax = "proto3";
+package venus.venus;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "venus/venus/params.proto";
+
+option go_package = "venus/x/venus/types";
+
+// GenesisState defines the venus module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
